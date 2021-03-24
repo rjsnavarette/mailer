@@ -1,0 +1,27 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation" class="alert alert-info">
+      <h2>Can't proceed:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mb-3 col-sm-4">
+    <%= form.label :name, class:"form-label" %>
+    <%= form.text_field :name, class:"form-control", placeholder:"Input name" %>
+  </div>
+
+  <div class="field mb-3 col-sm-4">
+    <%= form.label :email, class:"form-label" %>
+    <%= form.text_field :email, class:"form-control", placeholder:"Input email address" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Send test mail", class:"btn btn-success"%>
+  </div>
+<% end %>

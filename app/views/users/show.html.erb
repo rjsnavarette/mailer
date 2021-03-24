@@ -1,0 +1,31 @@
+<br><br>
+<div class="card">
+  <div class="card-header bg-dark">
+    <h3 id="notice"><%= notice %></h3>
+  </div>
+  <div class="card-body">
+    <p>
+      <strong>Name:</strong>
+      <%= @user.name %>
+    </p>
+
+    <p>
+      <strong>Email Address:</strong>
+      <%= @user.email %>
+    </p>
+
+    <div class="card">
+      <div class="card-body">
+        <h1 class="fst-italic">Hello <%= @user.name %>,<small> good day!</small></h1>
+        <br>
+        <p class="fst-italic">
+           This is just a test email only from ruby on rails created by <strong>Rhold James Steven S. Navarette</strong>.
+           <br><br>
+           Thank you and have a nice day!
+        </p>
+      </div>
+    </div>
+    <br>
+    <%= link_to 'Test mail again', new_user_path, class:"btn btn-success" %>
+  </div>
+</div>
